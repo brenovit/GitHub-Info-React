@@ -1,4 +1,8 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-ReactDOM.render(<h1>Hello World!</h1>,document.getElementById('app'));
+import GitHub from './components/GitHub'; //importa um novo Component para a classe
+
+const gitHub = <GitHub />; //crio um elemento para o component 
+
+ReactDOM.render(gitHub,document.getElementById('app'));
