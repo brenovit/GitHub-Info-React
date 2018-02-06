@@ -1,8 +1,9 @@
 import React from 'react';
 
 class SearchUser extends React.Component{
+    //Componentizando a area de busca
     constructor(props){
-        super(props);        
+        super(props);
         //Associo a função a classe dando um bind
         this.seguraSubmit = this.seguraSubmit.bind(this);
     }

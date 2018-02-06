@@ -18276,7 +18276,7 @@ class GitHub extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     constructor(props) {
         super(props);
     }
-
+    //Inserindo um componente como tag dentro do HTML
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
@@ -18298,6 +18298,7 @@ class GitHub extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 
 class SearchUser extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+    //Componentizando a area de busca
     constructor(props) {
         super(props);
         //Associo a função a classe dando um bind
