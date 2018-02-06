@@ -1,16 +1,31 @@
 import React from 'react';
+import GitHubUser from '../Services/GitHubUser';
 
 class SearchUser extends React.Component{
     //Componentizando a area de busca
     constructor(props){
         super(props);
         //Associo a função a classe dando um bind
-        this.seguraSubmit = this.seguraSubmit.bind(this);
+        this.seguraSubmit = this.seguraSubmit.bind(this);       
     }
 
     seguraSubmit(event){
         event.preventDefault();//impede a pagine de reiniciar
-        console.log(this.refs.userGit.value); //pega o valor do uma ref do form igual a 'userGit'
+        var username = this.refs.userGit.value;
+    
+        console.log(username); //pega o valor do uma ref do form igual a 'userGit'
+        
+        GitHubUser.getByUsername(username).then(
+            function(response){
+                console.log(response);
+            }
+        );
+
+        GitHubUser.getReposByUsername(username).then(
+            function(response){
+                console.log(response);
+            }
+        );
     }
 
     render(){
