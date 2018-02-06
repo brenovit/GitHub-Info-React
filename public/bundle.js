@@ -18268,9 +18268,36 @@ module.exports = camelize;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SearchUser__ = __webpack_require__(28);
+
 
 
 class GitHub extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'container' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__SearchUser__["a" /* default */], null)
+        );
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (GitHub);
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class SearchUser extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     constructor(props) {
         super(props);
         //Associo a função a classe dando um bind
@@ -18281,18 +18308,19 @@ class GitHub extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         event.preventDefault(); //impede a pagine de reiniciar
         console.log(this.refs.userGit.value); //pega o valor do uma ref do form igual a 'userGit'
     }
+
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { className: "jumbotron" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "h1",
-                null,
-                "GitHub Info"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 { className: "row" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h1",
+                    null,
+                    "GitHub Info"
+                ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "form",
                     { onSubmit: this.seguraSubmit },
@@ -18324,7 +18352,7 @@ class GitHub extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (GitHub);
+/* harmony default export */ __webpack_exports__["a"] = (SearchUser);
 
 /***/ })
 /******/ ]);
