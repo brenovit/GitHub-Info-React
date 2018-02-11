@@ -22,14 +22,14 @@ class GitHub extends React.Component {
 
     //Inserindo um componente como tag dentro do HTML
     render() {
-        var updateRepos = this.updateRepos.bind(this);
-        var updateUser = this.updateUser.bind(this);
+        var updateReposFunction = this.updateRepos.bind(this);
+        var updateUserFunction = this.updateUser.bind(this);
 
         return (            
             <div className="container">
                 <SearchUser 
-                    updateUser={updateUser}
-                    updateRepos={updateRepos}
+                    updateUser={updateReposFunction}
+                    updateRepos={updateUserFunction}
                 />
             </div>
         );
