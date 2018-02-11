@@ -2,9 +2,12 @@
   "name": "github-info-react",
   "version": "1.0.0",
   "description": "Projeto de estudo sobre React. [jscast]",
-  "main": "index.js",
+  "main": "./app/App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -23,7 +26,8 @@
   "dependencies": {
     "axios": "^0.17.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-scripts": "^1.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

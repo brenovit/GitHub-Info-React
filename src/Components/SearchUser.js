@@ -17,14 +17,14 @@ class SearchUser extends React.Component{
         
         GitHubUser.getByUsername(username).then(
             function(response){
-                console.log(response);
-            }
+                this.props.updateUser(response.data);
+            }.bind(this)
         );
 
         GitHubUser.getReposByUsername(username).then(
             function(response){
-                console.log(response);
-            }
+                this.props.updateRepos(response.data);
+            }.bind(this)
         );
     }
 
@@ -41,6 +41,7 @@ class SearchUser extends React.Component{
                             ref="userGit" //defini uma referencia para o input
                             className="form-control"
                             placeholder="Ex: matheusml"
+                            value="brenovit"
                             />
                         </div>
                         <button
