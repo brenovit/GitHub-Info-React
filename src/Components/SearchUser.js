@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GitHubUser from '../Services/GitHubUser';
 
 class SearchUser extends React.Component{
@@ -54,7 +55,14 @@ class SearchUser extends React.Component{
                 </div>
             </div>
         );
-    }
+    }    
+}
+
+//uso de propTypes, para validar a estrutura do componente a partir de regras em seu escopo,
+//validando o tipo de um objeto ou função
+SearchUser.propTypes = {
+    updateUser : PropTypes.func.isRequired,
+    updateRepos : PropTypes.func.isRequired
 }
 
 export default SearchUser;

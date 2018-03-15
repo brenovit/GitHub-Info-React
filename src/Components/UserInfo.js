@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //criação de função para tratar o componente
 function UserInfo(props){
@@ -18,6 +19,12 @@ function UserInfo(props){
     ) : null;
 
     return userInfoComponent; // retorno o component do user
+}
+
+//uso de propTypes, validador do tipo de um objeto ou função
+UserInfo.PropTypes = {
+    user : PropTypes.object.isRequired,
+    repos : PropTypes.object.isRequired
 }
 
 export default UserInfo;
