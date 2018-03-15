@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import UserRepos from './UserRepos';
 
 //criação de função para tratar o componente
 function UserInfo(props){
@@ -15,6 +16,9 @@ function UserInfo(props){
                 <p>Followers: {userInfo.followers} / Following: {userInfo.following}</p>
                 <p><a className="btn btn-default" href={userInfo.html_url} role="button">View details</a></p>
             </div>
+            <div className="col-lg-8">
+                <UserRepos repos={props.repos}/> 
+            </div>
         </div>
     ) : null;
 
@@ -22,9 +26,9 @@ function UserInfo(props){
 }
 
 //uso de propTypes, validador do tipo de um objeto ou função
-UserInfo.PropTypes = {
-    user : PropTypes.object.isRequired,
-    repos : PropTypes.object.isRequired
+UserInfo.propTypes = {
+    user : PropTypes.object,
+    repos : PropTypes.array
 }
 
 export default UserInfo;
