@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import UserRepos from './UserRepos';
+import UserProfile from './UserProfile';
 
 //criação de função para tratar o componente
 function UserInfo(props){
-    var userInfo = props.user; //Atribuo o props a uma variavel
+    var userProfile = props.user; //Atribuo o props a uma variavel
+    var userRepos = props.repos;
     //se o props estiver preenchido, monto componente HTML, se não salvo null
-    var userInfoComponent = userInfo ? 
+    var userInfoComponent = userProfile ? 
     (
         <div className="row">
             <div className="col-lg-4">
-                <img className="img-circle" src={userInfo.avatar_url} alt="avatar" width="140" heigh="140"/>
-                <h2>{userInfo.login}</h2>
-                <p>{userInfo.name}</p>
-                <p>Followers: {userInfo.followers} / Following: {userInfo.following}</p>
-                <p><a className="btn btn-default" href={userInfo.html_url} role="button">View details</a></p>
+                <UserProfile user={userProfile}/>
             </div>
             <div className="col-lg-8">
-                <UserRepos repos={props.repos}/> 
+                <UserRepos repos={userRepos}/> 
             </div>
         </div>
     ) : null;
