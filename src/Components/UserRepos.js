@@ -1,21 +1,21 @@
 import React from 'react';
 
 class UserRepos extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.repoDetail = this.repoDetail.bind(this); 
-       // this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
-       this.state = {
-           reposCount: 0
-       }
+        this.repoDetail = this.repoDetail.bind(this);
+        // this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
+        this.state = {
+            reposCount: 0
+        }
     }
 
-    componentWillReceiveProps(props){
-        this.setState({reposCount : props.repos.length});
+    componentWillReceiveProps(props) {
+        this.setState({ reposCount: props.repos.length });
     }
 
     //função para mapear o repositorio, recebendo o objeto do repositorio [repo] e uma chave(indice) [key]
-    repoDetail (repo, key) {
+    repoDetail(repo, key) {
         return (
             <div key={key} className="thumbnail">
                 <div className="caption">
@@ -24,8 +24,8 @@ class UserRepos extends React.Component {
                     </h3>
                     <p>{repo.description}</p>
                     <p>
-                       <a href={repo.html_url} className="btn btn-primary" role="button">Repository</a>
-                       <a href={repo.html_url + '/issues'} className="btn btn-default" role="button">Issues ({repo.open_issues}) </a>
+                        <a href={repo.html_url} className="btn btn-primary" role="button">Repository</a>
+                        <a href={repo.html_url + '/issues'} className="btn btn-default" role="button">Issues ({repo.open_issues}) </a>
                     </p>
                 </div>
             </div>
@@ -42,9 +42,9 @@ class UserRepos extends React.Component {
         //Retorno todo o conteudo da variavel repos
         return (
             <div><h2>{this.state.reposCount} repositories</h2>
-            {reposDetail}</div>
+                {reposDetail}</div>
         )
-    }    
+    }
 }
 
 export default UserRepos;

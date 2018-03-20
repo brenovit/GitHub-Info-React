@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 const GitHubApi = 'https://api.github.com/users/';
 
-var GitHubUser = {
+const GitHubUser = {
     getByUsername (username){
         return Axios.get(GitHubApi + username);
     },

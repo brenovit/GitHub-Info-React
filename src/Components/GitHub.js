@@ -42,3 +42,8 @@ class GitHub extends React.Component {
 }
 
 export default GitHub;
+
+
+export function sum(x,y){
+    return x+y;
+}

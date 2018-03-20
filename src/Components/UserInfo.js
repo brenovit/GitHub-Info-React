@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import UserRepos from './UserRepos';
 import UserProfile from './UserProfile';
 
+//criada uma arrow function
+//usada quando se tem apenas uma linha na function
+var sum = (x,y) => x+y;
+
 //criação de função para tratar o componente
-function UserInfo(props){
-    var userProfile = props.user; //Atribuo o props a uma variavel
-    var userRepos = props.repos;
+function UserInfo({user, repos}){
+    var userProfile = user; //Atribuo o props a uma variavel
+    var userRepos = repos;
     //se o props estiver preenchido, monto componente HTML, se não salvo null
     var userInfoComponent = userProfile ? 
     (
